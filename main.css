@@ -104,6 +104,10 @@ body {
     justify-content: center;
 }
 
+.header__nav_mobile {
+    display: none;
+}
+
 .header__item {
     padding: 1rem;
     cursor: pointer;
@@ -162,6 +166,19 @@ body {
         font-style: normal;
         font-size: 4.5rem;
         line-height: 1.3;
+        display: block;
+    }
+
+    .header__item_mobile:not(:last-child) {
+        padding: 3rem;
+    }
+
+    .header__item_mobile a {
+        color: #000;
+    }
+
+    .header__item_mobile a:hover {
+        color: #ffb600;
     }
 }
 /* Main */
