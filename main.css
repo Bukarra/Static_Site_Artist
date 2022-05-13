@@ -1,0 +1,265 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('/fonts/AmaticSC-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amatic SC';
+    src: url('/fonts/AmaticSC-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arina';
+    src: url('/fonts/Arina.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('/fonts/Lora-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('/fonts/Lora-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+
+/* Container */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 156rem;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Header */
+
+.header {
+    text-align: center;
+    padding: 4.8rem 0 7.4rem;
+}
+
+.header__wrap {
+    padding: 0 0 4.8rem;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.header__about {
+    font-family: 'Arina', serif;
+    font-size: 6rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.33;
+    cursor: pointer;
+}
+
+/* .header__about::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 2.4rem;
+    right: 0.4rem;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url(/images/svg/sirin.svg);
+    background-size: 100% 100%;
+} */
+
+.header__about a {
+    color: #000;
+    text-decoration: none;
+}
+
+.header__about a:hover {
+    color: #ffb600;
+}
+
+.header__nav {
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5rem;
+    line-height: 1.3;
+    display: flex;
+    justify-content: center;
+}
+
+.header__item {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.header__item:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.header__item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.header__item a:hover {
+    color: #ffb600;
+}
+
+.header__item_active {
+    position: relative;
+}
+
+.header__item_active::after {
+    position: absolute;
+    content: '.';
+    font-size: 4em;
+    top: -0.55em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 64em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 55em) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    html {
+        font-size: 65%;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__nav_mobile {
+        font-family: 'Amatic SC', sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 4.5rem;
+        line-height: 1.3;
+    }
+}
+/* Main */
+
+.gallery__wrap {
+    display: flex;
+    column-gap: 2.6rem;
+}
+
+.gallery {
+    flex: 0 1 33.33%;
+    display: flex;
+    row-gap: 2.6rem;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.gallery__item {
+    position: relative;
+}
+
+.gallery__item:hover .gallery__item-details {
+    opacity: 1;
+}
+
+.gallery__item img {
+    max-width: 100%;
+    border-radius: 1%;
+    filter: saturate(1.3) contrast(1.1);
+}
+
+.gallery__item-details {
+    position: absolute;
+    top: 1.4rem;
+    right: 5%;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 10%;
+    height: 0;
+    padding-bottom: 10%;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.gallery__item-details:hover {
+    background-color: #ffb600;
+}
+
+.gallery__item-details::before {
+    content: 'i';
+    position: absolute;
+    font-size: 2.1rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    max-width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery__item-info {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    background: #f7f2e7;
+    transition: 0.2s;
+    margin-top: -1.45rem;
+    padding: 2rem;
+    width: 1008%;
+    min-height: 100vh;
+    border-radius: 1%;
+}
+
+.gallery:not(:last-child) .gallery__item-info {
+    left: 200%;
+}
+
+.gallery:last-child .gallery__item-info {
+    right: 1000%;
+}
+
+.gallery__item-details:hover .gallery__item-info {
+    z-index: 1;
+}
+
+.gallery__item-headline {
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1.3;
+    margin-bottom: 4.5rem;
+}
+
+.gallery__item-description {
+    font-size: 1.6rem;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    line-height: 1.3;
+}
