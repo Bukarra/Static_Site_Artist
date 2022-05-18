@@ -1,0 +1,46 @@
+.about {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about__info {
+    display: flex;
+    column-gap: 8rem;
+}
+
+.about__image {
+    flex: 0 1 40%;
+}
+
+.about__image img {
+    width: 100%;
+}
+
+.about__short-bio {
+    flex: 0 1 55%;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    align-self: center;
+}
+
+.about__short-bio h2 {
+    margin-bottom: 3rem;
+}
+
+.about__short-text {
+    margin-bottom: 3rem;
+}
+
+.about__short-text p:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.about__headline {
+    font-size: 4rem;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.about__contacts p:not(:last-child) {
+    margin-bottom: 2rem;
+}
