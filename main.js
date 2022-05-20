@@ -1,3 +1,5 @@
+// Footer Appear
+
 const footerNav = document.querySelector('#footer-menu');
 
 window.addEventListener('scroll', footerAppear);
@@ -9,3 +11,7 @@ function footerAppear() {
         footerNav.classList.remove('footer__nav_visible');
     }
 }
+
+// Image Zoom
+
+mediumZoom('.gallery__item img');
