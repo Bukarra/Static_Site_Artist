@@ -92,6 +92,10 @@
     margin-top: 1.8rem;
 }
 
+.about__artist-image {
+    align-self: center;
+}
+
 .about__artist-image img {
     width: 32rem;
 }
@@ -103,6 +107,6 @@
     }
 
     .about__artist-image {
-        align-self: center;
+        order: 1;
     }
 }
