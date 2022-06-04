@@ -1,4 +1,4 @@
-// Footer Appear
+/* Footer Appear */
 
 const footerNav = document.querySelector('#footer-menu');
 
@@ -12,6 +12,17 @@ function footerAppear() {
     }
 }
 
-// Image Zoom
+/* Navigation Mobile */
+
+const navItems = document.querySelectorAll('.header__item-mobile_active');
+const navGroup = document.querySelectorAll('.nav-group');
+
+navGroup.forEach((i) => i.addEventListener('click', navItemsMobileAppear));
+
+function navItemsMobileAppear() {
+    navItems.forEach((i) => i.classList.toggle('header__item-mobile_hidden'));
+}
+
+/* Image Zoom */
 
 mediumZoom('.gallery__item img');
