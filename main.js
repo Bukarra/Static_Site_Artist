@@ -1,6 +1,6 @@
 /* Footer Appear */
 
-const footerNav = document.querySelector('#footer-menu');
+const footerNav = document.querySelector('.footer__items');
 
 window.addEventListener('scroll', footerAppear);
 
@@ -15,9 +15,9 @@ function footerAppear() {
 /* Navigation Mobile */
 
 const navItems = document.querySelectorAll('.header__item-mobile_active');
-const navGroup = document.querySelectorAll('.nav-group');
+const navGroup = document.querySelector('.header__item-group-mobile');
 
-navGroup.forEach((i) => i.addEventListener('click', navItemsMobileAppear));
+navGroup.addEventListener('click', navItemsMobileAppear);
 
 function navItemsMobileAppear() {
     navItems.forEach((i) => i.classList.toggle('header__item-mobile_hidden'));
