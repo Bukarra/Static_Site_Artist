@@ -2,21 +2,21 @@
 
 @font-face {
     font-family: 'Amatic SC';
-    src: url('/fonts/AmaticSC-Regular.ttf');
+    src: url('fonts/AmaticSC-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Arina';
-    src: url('/fonts/Arina.ttf');
+    src: url('fonts/Arina.ttf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lora';
-    src: url('/fonts/Lora-VariableFont_wght.ttf');
+    src: url('fonts/Lora-VariableFont_wght.ttf');
     font-style: normal;
 }
 
