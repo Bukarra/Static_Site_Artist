@@ -25,11 +25,11 @@ function navItemsMobileAppear() {
 
 /* API */
 
-// async function getURLsforImages() {
-//     const responce = await fetch(URL);
-//     const json = await responce.json();
-//     return json;
-// }
+/* async function getURLsforImages() {
+    const responce = await fetch('https://mockend.com/Bukarra/Static_Site_Artist/posts');
+    const json = await responce.json();
+    return json;
+} */
 
 console.log(getURLsforImages());
 
