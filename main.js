@@ -23,6 +23,16 @@ function navItemsMobileAppear() {
     navItems.forEach((i) => i.classList.toggle('header__item-mobile_hidden'));
 }
 
+/* API */
+
+// async function getURLsforImages() {
+//     const responce = await fetch(URL);
+//     const json = await responce.json();
+//     return json;
+// }
+
+console.log(getURLsforImages());
+
 /* Image Zoom */
 
 mediumZoom('.gallery__item img');
