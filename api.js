@@ -1,5 +1,5 @@
 const imgURL = 'https://my-json-server.typicode.com/Bukarra/Static_Site_Artist/data';
-const imageGallery = document.querySelector('.gallery');
+const imageGallery = document.querySelectorAll('.gallery');
 let imgData = [];
 
 function renderImage(imageURL, imageTitle, imageDescription) {
@@ -26,6 +26,7 @@ function renderImage(imageURL, imageTitle, imageDescription) {
     title.classList.add('gallery__item-headline');
     if (imageTitle === '') {
         title.textContent = 'Картина';
+        img.alt = 'Картина';
     } else {
         title.textContent = imageTitle;
     }
@@ -62,7 +63,17 @@ async function renderImagestoGallery() {
         images.push(elem);
     });
 
-    imageGallery.append(...images);
+    images.forEach((image, i) => {
+        if (i % 3 === 0) {
+            imageGallery[0].append(image);
+        } else if (i % 3 === 1) {
+            imageGallery[1].append(image);
+        } else {
+            imageGallery[2].append(image);
+        }
+    });
+
+    // imageGallery.forEach((gallery) => console.log(gallery.scrollHeight));
 
     intitializeLazyLoading();
 }
