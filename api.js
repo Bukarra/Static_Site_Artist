@@ -9,7 +9,6 @@ function renderImage(imageURL, imageTitle, imageDescription) {
     const img = document.createElement('img');
     img.classList.add('medium-zoom-image');
     img.setAttribute('data-src', imageURL);
-    // img.src = imageURL;
     img.alt = imageTitle;
     img.classList.add('lazy');
 
@@ -29,11 +28,18 @@ function renderImage(imageURL, imageTitle, imageDescription) {
 
     const description = document.createElement('p');
     description.classList.add('gallery__item-description');
-    imageDescription.textContent = imageDescription;
+    description.textContent = imageDescription;
 
-    about.append(title, description);
-    imgDetails.append(about);
-    wrapper.append(img, headerMobile, imgDetails);
+    if (imageTitle === '' || (imageTitle === '' && imageDescription === '')) {
+        imgDetails.remove();
+        about.append(title, description);
+        imgDetails.append(about);
+        wrapper.append(img, headerMobile);
+    } else {
+        about.append(title, description);
+        imgDetails.append(about);
+        wrapper.append(img, headerMobile, imgDetails);
+    }
 
     return [wrapper];
 }
@@ -48,7 +54,7 @@ async function renderImagestoGallery() {
     const images = [];
 
     data.forEach((image) => {
-        const [elem] = renderImage(image.url_big, image.name, image.description);
+        const [elem] = renderImage(image.url_small, image.name, image.description);
         images.push(elem);
     });
 
