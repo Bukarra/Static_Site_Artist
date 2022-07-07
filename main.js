@@ -23,16 +23,6 @@ function navItemsMobileAppear() {
     navItems.forEach((i) => i.classList.toggle('header__item-mobile_hidden'));
 }
 
-/* API */
-
-/* async function getURLsforImages() {
-    const responce = await fetch('https://mockend.com/Bukarra/Static_Site_Artist/posts');
-    const json = await responce.json();
-    return json;
-} */
-
-console.log(getURLsforImages());
-
 /* Image Zoom */
 
 mediumZoom('.gallery__item img');
