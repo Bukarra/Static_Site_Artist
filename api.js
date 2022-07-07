@@ -9,6 +9,7 @@ function renderImage(imageURL, imageTitle, imageDescription) {
     const img = document.createElement('img');
     img.classList.add('medium-zoom-image');
     img.setAttribute('data-src', imageURL);
+    // img.src = imageURL;
     img.alt = imageTitle;
     img.classList.add('lazy');
 
@@ -52,6 +53,8 @@ async function renderImagestoGallery() {
     });
 
     imageGallery.append(...images);
+
+    intitializeLazyLoading();
 }
 
 renderImagestoGallery();
