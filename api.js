@@ -24,13 +24,17 @@ function renderImage(imageURL, imageTitle, imageDescription) {
 
     const title = document.createElement('h2');
     title.classList.add('gallery__item-headline');
-    title.textContent = imageTitle;
+    if (imageTitle === '') {
+        title.textContent = 'Картина';
+    } else {
+        title.textContent = imageTitle;
+    }
 
     const description = document.createElement('p');
     description.classList.add('gallery__item-description');
     description.textContent = imageDescription;
 
-    if (imageTitle === '' || (imageTitle === '' && imageDescription === '')) {
+    if (imageTitle === '' && imageDescription === '') {
         imgDetails.remove();
         about.append(title, description);
         imgDetails.append(about);

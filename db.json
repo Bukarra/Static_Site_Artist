@@ -27,6 +27,13 @@
       "url_big": "https://sun9-6.userapi.com/impf/c636829/v636829816/61733/veVoy0GkTAY.jpg?size=960x1280&quality=96&sign=6b1c90ee1c3b1c0796bcc542428ad4f0&c_uniq_tag=dq2d6LrGg4ZBIWw71kVQXNRQ8igkNzHfT48ri1Xnx2w&type=album",
       "name": "",
       "description": "Some description"
+    },
+    {
+      "id_photo": 456239108,
+      "url_small": "https://i.picsum.photos/id/88/605/807.jpg?hmac=38XHNxM4BycmVjAiSZGA3ZcTtxf4OqDamMymatLH_yw",
+      "url_big": "https://i.picsum.photos/id/1077/800/1000.jpg?hmac=46gAzI55jqpj7GTLRppH3glM-d3XR0qqF5wSdRsIv8w",
+      "name": "City",
+      "description": "Just photo"
     }
   ]
 }
