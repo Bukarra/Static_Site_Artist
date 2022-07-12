@@ -50,27 +50,29 @@ body {
     left: 1.4rem;
 }
 
+.header__main-logo a {
+    color: #000000;
+}
+
+.header__main-logo-svg {
+    transition: 0.1s;
+}
+
+.header__main-logo-svg:hover {
+    color: #ffb600;
+}
+
 .header__wrap {
     padding: 0 0 5.2rem;
 }
 
 .header__about {
+    display: inline;
     font-family: 'Arina', serif;
     font-size: 6rem;
     font-weight: 400;
     font-style: normal;
     line-height: 0.66;
-    cursor: pointer;
-    display: inline;
-}
-
-.header__about a {
-    color: #000;
-    text-decoration: none;
-}
-
-.header__about a:hover {
-    color: #ffb600;
 }
 
 .header__nav {
@@ -92,7 +94,6 @@ body {
 
 .header__item {
     padding: 1rem;
-    cursor: pointer;
 }
 
 .header__item:not(:last-child) {
@@ -219,7 +220,6 @@ body {
 
 .gallery__item {
     position: relative;
-    cursor: pointer;
 }
 
 .gallery__item img {

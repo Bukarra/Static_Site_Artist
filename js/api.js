@@ -1,6 +1,5 @@
 const imgURL = 'https://my-json-server.typicode.com/Bukarra/Static_Site_Artist/data';
 const imageGallery = document.querySelectorAll('.gallery');
-let imgData = [];
 
 function renderImage(imageURL, imageTitle, imageDescription) {
     const wrapper = document.createElement('div');
@@ -51,9 +50,6 @@ function renderImage(imageURL, imageTitle, imageDescription) {
 async function renderImagestoGallery() {
     const responce = await fetch(imgURL);
     const data = await responce.json();
-    data.forEach((item) => {
-        imgData.push(item);
-    });
 
     const images = [];
 
