@@ -9,8 +9,8 @@
     },
     {
       "id_photo": 456239145,
-      "url_small": "https://source.unsplash.com/L1y9f5O8wiA/w=600",
-      "url_big": "https://source.unsplash.com/L1y9f5O8wiA/w=960",
+      "url_small": "https://source.unsplash.com/L1y9f5O8wiA/600",
+      "url_big": "https://source.unsplash.com/L1y9f5O8wiA/960",
       "name": "Unsplash",
       "description": ""
     },
